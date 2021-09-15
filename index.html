@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://localhost:9080/pkg/demo.js"></script>
+</head>
+
+<body>
+    <script>
+        const { test, Foo } = wasm_bindgen;
+
+        async function run() {
+            await wasm_bindgen('http://localhost:9080/pkg/demo_bg.wasm');
+
+            const a = Foo.new();
+
+            // a is comsumed
+            test(a);
+
+            // and wait for a's finalization registry work
+
+        }
+
+        run();
+
+    </script>
+</body>
+
+</html>
