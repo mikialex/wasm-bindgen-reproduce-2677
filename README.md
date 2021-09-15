@@ -11,6 +11,8 @@ open http://localhost:9080
 
 and wait a while(maybe 10 seconds)
 
+<img src="./error.png" width = 600/>
+
 ## demo fix
 
 the fix in https://github.com/rustwasm/wasm-bindgen/pull/2677 simply produce pkg/demo_fix.js, and it checked works
